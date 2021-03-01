@@ -7,6 +7,7 @@ make simulation
 ## Run
 ```
 ./build/simulation.out
+```
 
 ## Class description
 
