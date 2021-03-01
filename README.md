@@ -2,7 +2,7 @@
 
 ## Build
 ```
-make
+make simulation
 ```
 ## Run
 ```
