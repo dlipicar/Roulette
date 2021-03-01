@@ -28,14 +28,6 @@ void Roulette::spin()
     _number = uniform_dist(eng);
     
     std::cout << "New number: " << _number << std::endl;
-#ifdef DEBUG_MODE
-    std::cout << "isRed: " << isRed(_number) << std::endl;
-    std::cout << "isBlack: " << isBlack(_number) << std::endl;
-    std::cout << "isEven: " << isEven(_number) << std::endl;
-    std::cout << "isOdd: " << isOdd(_number) << std::endl;
-    std::cout << "isLow: " << isLow(_number) << std::endl;
-    std::cout << "isHigh: " << isHigh(_number) << std::endl;
-#endif
 }
 
 unsigned int Roulette::getNumber() const

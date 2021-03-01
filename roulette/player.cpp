@@ -47,7 +47,7 @@ unsigned int Player::getCurrentBet() const
 bool Player::onAddedToTable(std::shared_ptr<const TableRules> rules)
 {
     if (_playerStatus != PlayerStatus::Idle) {
-        std::cout << "Playe is already on a table" << std::endl;
+        std::cout << "Player is already on a table" << std::endl;
     }
 
     if (!rules->checkBet(INITIAL_BET)) {
