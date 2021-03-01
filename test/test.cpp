@@ -38,15 +38,12 @@ void testPlayer()
 
     std::map<BetType, std::shared_ptr<Player> > playerMap;
 
-    for (auto betType : allBetTypes) {
+    for (const auto &betType : allBetTypes) {
         playerMap[betType] = std::make_shared<Player>(std::to_string(static_cast<unsigned int>(betType)), betType);
-    }
-
-    for (auto betType : allBetTypes) {
         // Test betType
         assert(betType == playerMap[betType]->getBetType());
     }
-
+    
     auto playerA = std::make_shared<Player>("A", BetType::Red);
 
     // Test initial state
