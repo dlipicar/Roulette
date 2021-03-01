@@ -117,7 +117,7 @@ void Player::onBetLost()
         _betList.pop_front();
     }
 
-    std::cout << "Player " << _id << " lost. Current balance " << _balance << std::endl;
+    std::cout << "Player " << _id << " bet on " << betTypeToString(_betType) << " and lost " << _currentBet << ". Current balance " << _balance << std::endl;
 
     calculateNewBet();
 }
@@ -125,7 +125,7 @@ void Player::onBetLost()
 void Player::onBetWon() {
     _betList.push_back(_currentBet);
     
-    std::cout << "Player " << _id << " won. Current balance " << _balance << std::endl;
+    std::cout << "Player " << _id << " bet on " << betTypeToString(_betType) <<  " and won " << _currentBet << ". Current balance " << _balance << std::endl;
 
     calculateNewBet();
 }

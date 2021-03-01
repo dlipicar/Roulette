@@ -1,6 +1,8 @@
 #ifndef BETDEFS_H
 #define BETDEFS_H
 
+#include <string>
+
 namespace BetDefs
 {
     // Type for actual money
@@ -28,6 +30,9 @@ namespace BetDefs
 
     // Returns how many times a certain winning BetType is paid
     unsigned int betPayout(BetType type);
+
+    // Returns a string representing the BetType
+    std::string betTypeToString(BetType type);
 }
 
 #endif //BETDEFS_H
