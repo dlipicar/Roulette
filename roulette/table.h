@@ -6,10 +6,13 @@
 #include "roulette.h"
 #include "tablerules.h"
 
+#include <tuple>
 #include <list>
 #include <memory>
 
 class Table {
+    // Player State containing Player reference, whether their bet was taken, their bet type and the bet amount
+    using PlayerState = std::tuple<std::shared_ptr<Player>, bool, BetDefs::BetType, BetDefs::Money>;
 
 public:
     Table();
@@ -31,7 +34,7 @@ private:
 
     std::shared_ptr<TableRules> _rules;
     Roulette _roulette;
-    std::list<std::shared_ptr<Player> > _players;
+    std::list<PlayerState> _playerStateList;
     BetDefs::Balance _balance;
 };
 

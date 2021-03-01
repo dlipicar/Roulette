@@ -164,7 +164,7 @@ void Player::printList() const
 {
     std::string listStr = "Player " +_id + " list: ";
 
-    for (const auto num : _betList) {
+    for (const auto &num : _betList) {
         listStr += " ";
         listStr += std::to_string(num);
     }
